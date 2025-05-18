@@ -3,16 +3,16 @@
 :root {
   /* Primary Colors */
   --light-red: hsl(0, 100%, 67%);
-  --light-red-op: hsl(0, 100%, 67%, 0.05);
+  --light-red-bg: hsl(0, 100%, 67%, 0.05);
 
   --orangey-yellow: hsl(39, 100%, 56%);
-  --orangey-yellow-op: hsl(39, 100%, 56%, 0.05);
+  --orangey-yellow-bg: hsl(39, 100%, 56%, 0.05);
 
   --green-teal: hsl(166, 100%, 37%);
-  --green-teal-op: hsl(166, 100%, 37%, 0.05);
+  --green-teal-bg: hsl(166, 100%, 37%, 0.05);
 
   --cobalt-blue: hsl(234, 85%, 45%);
-  --cobalt-blue-op: hsl(234, 85%, 45%, 0.05);
+  --cobalt-blue-bg: hsl(234, 85%, 45%, 0.05);
 
   /* Gradients */
   --light-slate-blue: hsl(252, 100%, 67%);
@@ -128,6 +128,7 @@ body {
   flex-direction: column;
   background-color: var(--white);
   height: 100%;
+  justify-content: space-between;
 }
 
 .summary-head {
@@ -144,7 +145,6 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--light-red-op);
   width: 100%;
   padding: 0.6rem;
 }
@@ -161,7 +161,6 @@ body {
 }
 
 .field-name {
-  color: var(--light-red);
   font-size: 0.85rem;
   font-weight: 600;
 }
@@ -203,7 +202,7 @@ body {
   );
 }
 
-@media screen and (width>580px) {
+@media screen and (width>550px) {
   body {
     align-items: center;
     padding: 1em;

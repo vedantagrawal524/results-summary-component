@@ -1,16 +1,24 @@
-export default function TestField() {
+export default function TestField(props) {
   return (
-    <div className="test-field">
+    <div
+      className="test-field"
+      style={{
+        backgroundColor: props.bgColor,
+      }}
+    >
       <div className="field-type">
-        <img
-          className="field-img"
-          src="/src/assets/images/icon-reaction.svg"
-          alt="Reaction Icon"
-        />
-        <p className="field-name">Reaction</p>
+        <img className="field-img" src={props.icon} alt={props.name} />
+        <p
+          className="field-name"
+          style={{
+            color: props.color,
+          }}
+        >
+          {props.name}
+        </p>
       </div>
       <p className="field-percent">
-        <span className="percent">80</span> / 100
+        <span className="percent">{props.score}</span> / 100
       </p>
     </div>
   );
