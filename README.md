@@ -27,9 +27,9 @@ Users should be able to:
 
 ### Screenshot
 
-![Desktop Screenshot](/src/assets/design/active-states.jpg)
+![Desktop Screenshot](./design/active-states.jpg)
 
-![Mobile Screenshot](/src/assets/design/mobile-design.jpg)
+![Mobile Screenshot](./design/mobile-design.jpg)
 
 ---
 
