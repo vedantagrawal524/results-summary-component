@@ -6,7 +6,7 @@ export default function Main() {
   const [testResults, setTestResults] = useState([]);
 
   useEffect(() => {
-    fetch("/data.json")
+    fetch("data.json")
       .then((res) => res.json())
       .then((data) => setTestResults(data));
   }, []);
