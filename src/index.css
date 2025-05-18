@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  /* Primary Colors */
+  --light-red: hsl(0, 100%, 67%);
+  --light-red-op: hsl(0, 100%, 67%, 0.05);
+
+  --orangey-yellow: hsl(39, 100%, 56%);
+  --orangey-yellow-op: hsl(39, 100%, 56%, 0.05);
+
+  --green-teal: hsl(166, 100%, 37%);
+  --green-teal-op: hsl(166, 100%, 37%, 0.05);
+
+  --cobalt-blue: hsl(234, 85%, 45%);
+  --cobalt-blue-op: hsl(234, 85%, 45%, 0.05);
+
+  /* Gradients */
+  --light-slate-blue: hsl(252, 100%, 67%);
+  --light-royal-blue: hsl(241, 81%, 54%);
+  --violet-blue: hsla(256, 72%, 46%, 1);
+  --persian-blue: hsla(241, 72%, 46%, 0);
+
+  /* Neutral Colors */
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s linear;
+}
+
+html {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+/* Body */
+
+body {
+  min-height: 100vh;
+  background-color: var(--pale-blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card {
+  display: grid;
+  background-color: var(--white);
+  grid-template-columns: 1fr;
+  width: 100%;
+  max-width: 35em;
+}
+
+.result {
+  background: linear-gradient(
+    to bottom,
+    var(--light-slate-blue),
+    var(--light-royal-blue)
+  );
+
+  padding: 2em;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.result-head {
+  color: var(--light-lavender);
+  font-size: 1rem;
+}
+
+.result-percent {
+  background: linear-gradient(
+    to bottom,
+    var(--violet-blue),
+    var(--persian-blue)
+  );
+  width: 8rem;
+  height: 8rem;
+  border-radius: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--light-lavender);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+#total-percent {
+  color: var(--white);
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.result-remark {
+  color: var(--white);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.result-message {
+  text-align: center;
+  color: var(--light-lavender);
+  font-size: 0.85rem;
+  font-weight: 500;
+  max-width: 220px;
+}
+
+.summary {
+  padding: 2em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--white);
+  height: 100%;
+}
+
+.summary-head {
+  color: var(--dark-gray-blue);
+  font-size: 1.05rem;
+  font-weight: 700;
+  align-self: flex-start;
+}
+
+.test-field {
+  margin-top: 0.9rem;
+  border-radius: 0.4rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--light-red-op);
+  width: 100%;
+  padding: 0.6rem;
+}
+
+.field-type {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.field-img {
+  width: 1rem;
+  height: auto;
+}
+
+.field-name {
+  color: var(--light-red);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.field-percent {
+  font-weight: 400;
+  color: lightslategray;
+  font-size: 0.83rem;
+  font-weight: 600;
+  display: flex;
+  gap: 0.4rem;
+}
+
+.percent {
+  font-weight: 700;
+  color: var(--dark-gray-blue);
+}
+
+.continue {
+  margin-top: 1.5rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: var(--dark-gray-blue);
+  color: var(--white);
+  border-radius: 5rem;
+  width: 100%;
+  height: 2.5rem;
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.04rem;
+}
+
+.continue:hover {
+  background: linear-gradient(
+    to bottom,
+    var(--light-slate-blue),
+    var(--light-royal-blue)
+  );
+}
+
+@media screen and (width>580px) {
+  body {
+    align-items: center;
+    padding: 1em;
+  }
+
+  .card {
+    grid-template-columns: 1fr 1fr;
+    border-radius: 1.5rem;
+    margin: 1em;
+  }
+
+  .result {
+    border-radius: 1.5rem;
+  }
+
+  .result-percent {
+    width: 9rem;
+    height: 9rem;
+  }
+
+  #total-percent {
+    font-size: 3.5rem;
+  }
+
+  .result-remark {
+    font-size: 1.4rem;
+  }
+
+  .result-message {
+    max-width: 200px;
+  }
+
+  .summary {
+    border-radius: 1.5rem;
+  }
+}
